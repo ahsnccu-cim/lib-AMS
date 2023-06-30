@@ -6,7 +6,7 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100% ;
+      height: 100%;
     }
 
     .container {
@@ -15,12 +15,14 @@
       align-items: center;
       height: 100%;
     }
+
     .calendar {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 5px;
-      width: 75% ;
+      width: 75%;
     }
+
     .calendar__day {
       text-align: center;
       padding: 10px;
@@ -28,9 +30,26 @@
       background-color: #f9f9f9;
       cursor: pointer;
     }
+
     .calendar__header {
       text-align: center;
       margin-bottom: 10px;
+    }
+
+    .calendar__day.current-day {
+      background-color: blue;
+      font-weight: bold;
+    }
+
+    .calendar__footer {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .calendar__day.current-day {
+      background-color: rgb(35, 40, 124);
+      font-weight: bold;
+      color: #f8dd49;
     }
 
   </style>
@@ -49,6 +68,9 @@
   <div class="container">
 
   <div id="calendar" class="calendar"></div>
+  </div>
+  <div class="calendar__footer">
+    <button onclick="goToToday()">Return to Today</button>
   </div>
   <script>
     // 獲取當下日期
@@ -95,17 +117,23 @@
         dayElement.textContent = i;
 
         // 為日期添加點擊事件
-dayElement.addEventListener('click', function() {
-  const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const currentDayOfWeek = weekdays[new Date(currentYear, currentMonth, i).getDay()];
-  const paddedMonth = String(currentMonth + 1).padStart(2, '0');
-  const paddedDay = String(i).padStart(2, '0');
+        dayElement.addEventListener('click', function() {
+          const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          const currentDayOfWeek = weekdays[new Date(currentYear, currentMonth, i).getDay()];
+          const paddedMonth = String(currentMonth + 1).padStart(2, '0');
+          const paddedDay = String(i).padStart(2, '0');
 
-  const link = 'https://ahsnccu-scit.github.io/ahsnccu-lib-AMS/' + currentYear + '-' + paddedMonth + '-' + paddedDay + '%20' + currentDayOfWeek +'.html';
-  window.location.href = link;
-});
+          const link = 'https://ahsnccu-scit.github.io/ahsnccu-lib-AMS/' + currentYear + '-' + paddedMonth + '-' + paddedDay + '%20' + currentDayOfWeek +'.html';
+          window.location.href = link;
+        });
 
-
+        if (
+          i === today.getDate() &&
+          currentMonth === today.getMonth() &&
+          currentYear === today.getFullYear()
+        ) {
+          dayElement.classList.add('current-day');
+        }
 
         calendarElement.appendChild(dayElement);
       }
@@ -132,6 +160,13 @@ dayElement.addEventListener('click', function() {
         currentMonth = 0;
         currentYear++;
       }
+      generateCalendar();
+    }
+
+    // 返回今天日期
+    function goToToday() {
+      currentYear = today.getFullYear();
+      currentMonth = today.getMonth();
       generateCalendar();
     }
 
