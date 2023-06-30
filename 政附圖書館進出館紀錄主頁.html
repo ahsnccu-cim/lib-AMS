@@ -3,12 +3,23 @@
 <head>
   <title>國立政大附中圖書館進出館記錄</title>
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100% ;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
     .calendar {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 5px;
-      max-width: 400px;
-      margin: 0 auto;
+      width: 75% ;
     }
     .calendar__day {
       text-align: center;
@@ -21,9 +32,11 @@
       text-align: center;
       margin-bottom: 10px;
     }
+
   </style>
 </head>
 <body>
+
   <h1><center>
     國立政大附中圖書館進出館記錄
   </center></h1>
@@ -33,9 +46,10 @@
     <span id="currentMonth"></span>
     <button onclick="nextMonth()">Next</button>
   </div>
+  <div class="container">
 
   <div id="calendar" class="calendar"></div>
-
+  </div>
   <script>
     // 獲取當下日期
     const today = new Date();
@@ -85,8 +99,9 @@ dayElement.addEventListener('click', function() {
   const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const currentDayOfWeek = weekdays[new Date(currentYear, currentMonth, i).getDay()];
   const paddedMonth = String(currentMonth + 1).padStart(2, '0');
+  const paddedDay = String(i).padStart(2, '0');
 
-  const link = 'https://ahsnccu-scit.github.io/ahsnccu-lib-AMS/' + currentYear + '-' + paddedMonth + '-' + i + '%20' + currentDayOfWeek +'.html';
+  const link = 'https://ahsnccu-scit.github.io/ahsnccu-lib-AMS/' + currentYear + '-' + paddedMonth + '-' + paddedDay + '%20' + currentDayOfWeek +'.html';
   window.location.href = link;
 });
 
@@ -123,5 +138,6 @@ dayElement.addEventListener('click', function() {
     // 初始化月曆
     generateCalendar();
   </script>
+
 </body>
 </html>
