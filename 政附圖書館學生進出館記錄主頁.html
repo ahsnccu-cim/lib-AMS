@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>國立政大附中圖書館進出館記錄</title>
+  <title>國立政大附中圖書館學生進出館記錄</title>
   <style>
     body {
       margin: 0;
@@ -52,7 +52,12 @@
       color: #f8dd49;
     }
     
-
+    .team-info {
+      text-align: center;
+      color:#ccc;
+      margin-top: 120px;
+      line-height: 1.5;
+    }
 
 
   </style>
@@ -75,9 +80,12 @@
   <div class="calendar__footer">
     <button onclick="goToToday()">Return to Today</button>
   </div>
+
   <div class="team-info">
-    開發團隊：政附第十六屆 · 王修佑 · 沈至萱 · 李馨亞
+    developed by 政附第十六屆 · 王修佑 · 沈至萱 · 李馨亞<br>
+    powered by AHSNCCU.SCIT
   </div>
+
   <script>
     // 獲取當下日期
     const today = new Date();
@@ -129,7 +137,7 @@
           const paddedMonth = String(currentMonth + 1).padStart(2, '0');
           const paddedDay = String(i).padStart(2, '0');
 
-          const link = 'https://ahsnccu-scit.github.io/ahsnccu-lib-AMS/' + currentYear + '-' + paddedMonth + '-' + paddedDay + '%20' + currentDayOfWeek +'.html';
+          const link = 'https://ahsnccu-scit.github.io/lib-AMS/' + currentYear + '-' + paddedMonth + '-' + paddedDay + '%20' + currentDayOfWeek +'.html';
           window.location.href = link;
         });
 
