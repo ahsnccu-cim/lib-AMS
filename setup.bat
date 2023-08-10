@@ -1,0 +1,1 @@
+pyinstaller -F main_beta.py
