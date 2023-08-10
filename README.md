@@ -2,14 +2,6 @@
 > 國立政大附中學生證進出管理系統
 > AHSNCCU Access Management System (AMS)
 
-<style>
-hr.style-two {
-    border: 0;
-    height: 1.5px;
-    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-}
-</style>
-
 + 適用於 Windows 10, 11。
 + Linux(Ubuntu 22.04) 與 MacOS 測試中...
 
@@ -63,6 +55,18 @@ hr.style-two {
 
 
 
+<html>
+    <head>
+        <style>
+        hr.style-two {
+            border: 0;
+            height: 1.5px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+        }
+        </style>
+    </head>
+    <body>
+        
 
 <hr class="style-two" 
     style="margin-bottom: -12.5px;
@@ -75,4 +79,6 @@ hr.style-two {
 <center> <a href="https://linktr.ee/whyhugo">王修佑</a> ｜ 沈至萱 ｜ 李馨亞 </center>
 <p></p>
 <center> Powered by 國立政大附中學生校友電資社群<br><a href='https://github.com/ahsnccu-scit/lib-AMS/tree/dev'> 開放原始碼 </a> </center>
+    </body>
+</html>
 
