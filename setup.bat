@@ -9,4 +9,5 @@ pip install pandas
 pip install re
 pip install tkinter
 pip install subprocess.run
+pip install openpyxl
 pyinstaller -F main_beta.py

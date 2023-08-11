@@ -174,57 +174,47 @@ print('sub def run [FINISH]')
 
 #主程式
 def main():
-    idnum = input("待機模式，請刷卡：")
-    date = datetime.datetime.now().strftime('%Y-%m-%d %A')
-    df1 = pd.read_excel(f"{user_historyfile}/{date}.xlsx", index_col=None)
-    time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    class_, number, name = find_st_info(idnum)
-    print(idnum, class_, number, name, time)
-    a.set(f"班級：{class_}   座號：{number}\n姓名：{name}\n")
-    b.set(f"\n現在時間：{time}")
-    get_near_record = 0 #用於控制：要新增資料(入館)還是修改資料(出館)，避免完成修改資料後又新增為入館資料
-    if len(df1) > 0: #第二筆資料開始跑這邊
-        for i in range(len(df1)): #尋找是否還未出館
-            if (df1.loc[i, '姓名'] == name) and (df1.loc[i, 'Status'] == 'IN'): #TRUE=這人要出館
-                df1.loc[i, 'Status'] = 'OUT'
-                df1.loc[i, '出館時間'] = time
-                get_near_record = 1 #出館，完成修改資料，切到1
+    try:
+        idnum = input("待機模式，請刷卡：")
+        date = datetime.datetime.now().strftime('%Y-%m-%d %A')
+        df1 = pd.read_excel(f"{user_historyfile}/{date}.xlsx", index_col=None)
+        time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        class_, number, name = find_st_info(idnum)
+        print(idnum, class_, number, name, time)
+        a.set(f"班級：{class_}   座號：{number}\n姓名：{name}\n")
+        b.set(f"\n現在時間：{time}")
+        get_near_record = 0 #用於控制：要新增資料(入館)還是修改資料(出館)，避免完成修改資料後又新增為入館資料
+        if len(df1) > 0: #第二筆資料開始跑這邊
+            for i in range(len(df1)): #尋找是否還未出館
+                if (df1.loc[i, '姓名'] == name) and (df1.loc[i, 'Status'] == 'IN'): #TRUE=這人要出館
+                    df1.loc[i, 'Status'] = 'OUT'
+                    df1.loc[i, '出館時間'] = time
+                    get_near_record = 1 #出館，完成修改資料，切到1
+                    count_ = count_in(df1)
+                    c_temp.pack_forget()
+                    c.set(f"場館人數：{count_}  今日人次：{len(df1)}")
+                    pack_out()
+                    break #不再尋找
+            if get_near_record == 0: #入館，要新增資料
+                new_data = pd.DataFrame(pd.DataFrame([[class_,number,name,time,'','IN']], columns=['班級','座號','姓名','入館時間','出館時間','Status']))
+                df1 = pd.concat([new_data, df1], ignore_index=True)
                 count_ = count_in(df1)
                 c_temp.pack_forget()
                 c.set(f"場館人數：{count_}  今日人次：{len(df1)}")
-                pack_out()
-                break #不再尋找
-        if get_near_record == 0: #入館，要新增資料
+                pack_inn()
+        else: #僅用於"新增"第一筆資料
             new_data = pd.DataFrame(pd.DataFrame([[class_,number,name,time,'','IN']], columns=['班級','座號','姓名','入館時間','出館時間','Status']))
-            df1 = pd.concat([new_data, df1], ignore_index=True)
+            df1 = pd.concat([new_data, df1], ignore_index=True)        
             count_ = count_in(df1)
             c_temp.pack_forget()
             c.set(f"場館人數：{count_}  今日人次：{len(df1)}")
             pack_inn()
-    else: #僅用於"新增"第一筆資料
-        new_data = pd.DataFrame(pd.DataFrame([[class_,number,name,time,'','IN']], columns=['班級','座號','姓名','入館時間','出館時間','Status']))
-        df1 = pd.concat([new_data, df1], ignore_index=True)        
-        count_ = count_in(df1)
-        c_temp.pack_forget()
-        c.set(f"場館人數：{count_}  今日人次：{len(df1)}")
-        pack_inn()
-    df1.to_excel(f"{user_historyfile}/{date}.xlsx", index=False) #輸出至local, OneDrive會auto sync
-    '''
-    with xw.App(visible=False) as app:
-        wb = xw.Book(f"{user_historyfile}/{date}.xlsx")
-        sheet = wb.sheets['Sheet1']
-        used_range = sheet.used_range
-        used_range.columns.autofit()
-        wb.save()
-    window.after(3100, main) #等待2100ms後迴圈 
-    '''
-    '''
+        df1.to_excel(f"{user_historyfile}/{date}.xlsx", index=False) #輸出至 local, OneDrive 會 auto sync
     except:
         pack_erro()
-        window.after(2600, main)
-    '''
+        window.after(3100, main)   
     
-    window.after(3100, main) #等待2100ms後迴圈 
+    #window.after(3100, main) #等待2100ms後迴圈 
 
 print('ready to run main')
 main()
