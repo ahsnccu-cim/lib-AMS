@@ -72,17 +72,17 @@ def new_day(user_historyfile):
 new_day(user_historyfile)
 
 #呼叫其他程式
-print('ready process newday')
+print('ready subprocess newday')
 subprocess.Popen(['python', f'{user_exe}/NewDay.py', user_historyfile])
 print('ready subprocess autopush')
 subprocess.Popen(['python', f'{user_exe}/AutoPush.py', user_historyfile])
 
-print('finish subprocess')
+print('subprocess [FINISH]')
 
 #讀取學生證內碼與學生資訊對應資料檔
 df = pd.read_csv(user_idfile, header='infer', encoding='utf-8-sig')
 
-print('finish df(id.csv) read')
+print('df(id.csv) read [FINISH]')
 
 #建立tkinter視窗與標題
 window = tk.Tk()
@@ -170,7 +170,7 @@ def count_in(df1):
             count += 1
     return count
 
-print('finish sub def run')
+print('sub def run [FINISH]')
 
 #主程式
 def main():
