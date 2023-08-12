@@ -60,7 +60,7 @@ AHSNCCU Access Management System (AMS)</p>
 ## 版本更新
 ### 方法一
 1. 點擊執行 `upgrade.bat`
-2. 將新版程式覆蓋舊版檔案
+2. 將在新 `lib-ams-dev` 資料夾中的新版程式覆蓋舊版檔案
 3. 執行前述<a href="#部屬環境">部屬與啟動步驟</a>
 
 ### 方法二
