@@ -1,21 +1,25 @@
-
-<h1> 政附電資社群 AMS 進出管理系統 操作說明 </h1>
-國立政大附中學生證進出管理系統<br>
-AHSNCCU Access Management System (AMS)
+<h1 align="center">政附電資社群 AMS 進出管理系統 操作說明</h1>
+<p align="center">國立政大附中學生證進出管理系統<br>
+AHSNCCU Access Management System (AMS)</p>
 <p></p>
 
 > [!NOTE]\
-> 適用於 Windows 10, 11。<br>
-> Linux(Ubuntu 22.04) 與 MacOS 測試中...
+> + 適用於 Windows 10, 11。<br>
+> + Linux (Ubuntu 22.04) 與 MacOS 測試中...
 
 <p align="center"> (🚧文件施工中🚧) </p>
 <h2>部屬環境</h2>
-<ol>
-    <li>請事先安裝好 Python 3.x</li>
-    <li><strong>請點擊執行 <code>setup.bat</code></strong></li>
-</ol>
+
+> [!IMPORTANT]\
+> 請事先安裝好 [Python 3.x](https://www.python.org/) 與 [Git](https://git-scm.com/downloads)。
+
+<ul>
+    <li>請點擊執行 <code>setup.bat</code></li>
+</ul>
 <h2>啟動程式</h2>
-<p><strong>請點擊執行 <code>main_beta.exe</code></strong></p>
+<ul>
+<li>至 dist 資料夾中，點擊執行 <code>main_beta.exe</code></li>
+</ul>
 <h3>介面自定義</h3>
 <p>依照畫面提示進行以下步驟</p>
 <ol>
@@ -23,7 +27,7 @@ AHSNCCU Access Management System (AMS)
     <li>輸入介面中文標題</li>
     <li>輸入介面英文標題</li>
 </ol>
-<ul><li>  輸入完成，確認後依照提示：確認輸入 <code>y</code> ；需重新更正輸入 <code>n</code></li></ul>
+<ul><li>輸入完成，確認後依照提示：確認輸入 <code>y</code> ；需重新更正輸入 <code>n</code></li></ul>
 
 ![](https://hackmd.io/_uploads/HJTx4nMn2.png)
 <p align="center">GUI 介面範例</p>
