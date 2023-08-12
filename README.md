@@ -3,4 +3,4 @@
 AHSNCCU Access Management System (AMS)</p>
 
 > [!IMPORTANT]\
-> **操作說明在 `dev` branch 的 `README.md`。**
+> **操作說明在 [`dev` branch 的 `README.md`](https://github.com/ahsnccu-scit/lib-AMS/tree/dev#readme)。**
