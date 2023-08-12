@@ -1,5 +1,5 @@
 <p align="center">
-<img width=100px src="https://i.imgur.com/kkyOor0.png" align="center" alt="AHSNCCU-SCIT logo" />
+<img width=100px src="https://i.imgur.com/alQvQ0b.png" align="center" alt="AHSNCCU-SCIT logo" />
 </p>
 <h1 align="center">政附電資社群 AMS 學生證進出管理系統 操作說明</h1>
 <p align="center">國立政大附中學生證進出管理系統<br>
