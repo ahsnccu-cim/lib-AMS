@@ -1,4 +1,7 @@
-<h1 align="center">政附電資社群 AMS 進出管理系統 操作說明</h1>
+<p align="center">
+<img width=100px src="https://i.imgur.com/kkyOor0.png" align="center" alt="AHSNCCU-SCIT logo" />
+</p>
+<h1 align="center">政附電資社群 AMS 學生證進出管理系統 操作說明</h1>
 <p align="center">國立政大附中學生證進出管理系統<br>
 AHSNCCU Access Management System (AMS)</p>
 <p></p>
@@ -12,6 +15,9 @@ AHSNCCU Access Management System (AMS)</p>
 
 > [!IMPORTANT]\
 > 請事先安裝好 [Python 3.x](https://www.python.org/) 與 [Git](https://git-scm.com/downloads)。
+
+> [!WARNING]\
+> 請勿更改已建立好的進出紀錄資料夾名稱（預設名稱為：「進出紀錄」）
 
 <ul>
     <li>請點擊執行 <code>setup.bat</code></li>
@@ -46,6 +52,12 @@ AHSNCCU Access Management System (AMS)</p>
 <ul><li>輸入完成，確認後依照提示：確認輸入 <code>y</code> ；需重新更正輸入 <code>n</code></li></ul>
 
 ## 版本更新
+### 方法一
+1. 點擊執行 `upgrade.bat`
+2. 將新版程式覆蓋舊版檔案
+3. 執行前述<a href="#部屬環境">部屬與啟動步驟</a>
+
+### 方法二
 1. 開啟 Command Prompt<br>
 2. 下載新版程式：<br>
 
@@ -53,8 +65,8 @@ AHSNCCU Access Management System (AMS)</p>
 git clone -b dev https://github.com/ahsnccu-scit/lib-AMS.git
 ```
 
-3. 將新版程式覆蓋舊版檔案</li>
-4. 執行前述<a href="#部屬環境">部屬與啟動步驟</a></li>
+3. 將新版程式覆蓋舊版檔案
+4. 執行前述<a href="#部屬環境">部屬與啟動步驟</a>
 
 
 ---
