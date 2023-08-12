@@ -4,9 +4,9 @@
 AHSNCCU Access Management System (AMS)
 <p></p>
 
-> [!IMPORTANT]\
-> 適用於 Windows 10, 11。
-> Linux(Ubuntu 22.04) 與 MacOS 測試中...</li>
+> [!NOTE]\
+> 適用於 Windows 10, 11。<br>
+> Linux(Ubuntu 22.04) 與 MacOS 測試中...
 
 <p align="center"> (🚧文件施工中🚧) </p>
 <h2>部屬環境</h2>
@@ -30,7 +30,10 @@ AHSNCCU Access Management System (AMS)
 
 <h3>環境自定義</h3>
 <p>依照畫面提示進行以下步驟</p>
-<ul><li>注意！輸入檔案與資料夾路徑時，<strong>請使用 <code>/</code></strong>，勿使用 Windows 系統預設的 <code>\</code></li></ul>
+
+> [!IMPORTANT]\
+> 注意！輸入檔案與資料夾路徑時，**請使用 `/`**，勿使用 Windows 系統預設的 `\`
+
 <ol>
     <li>輸入用來儲存所有程式的<strong>資料夾路徑</strong><br>例如：<code>C:/user/user/文件/lib-AMS-dev</code></li>
     <li>輸入學生證內碼 csv <strong>檔案路徑</strong><br>例如：<code>C:/user/user/文件/lib-AMS-dev/學生證內碼/悠遊卡內碼.csv</code></li>
