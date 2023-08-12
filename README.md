@@ -3,12 +3,11 @@
 國立政大附中學生證進出管理系統<br>
 AHSNCCU Access Management System (AMS)
 <p></p>
-<blockquote>
-<ul>
-    <li>適用於 Windows 10, 11。</li>
-    <li>Linux(Ubuntu 22.04) 與 MacOS 測試中...</li>
-</ul>
-</blockquote>
+
+> [!IMPORTANT]\
+> 適用於 Windows 10, 11。
+> Linux(Ubuntu 22.04) 與 MacOS 測試中...</li>
+
 <p align="center"> (🚧文件施工中🚧) </p>
 <h2>部屬環境</h2>
 <ol>
