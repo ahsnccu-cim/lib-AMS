@@ -7,10 +7,11 @@ AHSNCCU Access Management System (AMS)</p>
 <p></p>
 
 > [!NOTE]\
-> + 適用於 Windows 10, 11。<br>
-> + Linux (Ubuntu 22.04) 與 MacOS 測試中...
+> 適用於 Windows 10, 11。<br>
+> Linux (Ubuntu 22.04) 與 MacOS 測試中...
 
 <p align="center"> (🚧文件施工中🚧) </p>
+
 <h2>部屬環境</h2>
 
 > [!IMPORTANT]\
@@ -46,7 +47,7 @@ AHSNCCU Access Management System (AMS)</p>
 <h3>環境自定義</h3>
 <p>依照畫面提示進行以下步驟</p>
 
-> [!IMPORTANT]\
+> [!WARNING]\
 > 注意！輸入檔案與資料夾路徑時，**請使用 `/`**，勿使用 Windows 系統預設的 `\`
 
 <ol>
