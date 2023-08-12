@@ -22,10 +22,10 @@ AHSNCCU Access Management System (AMS)</p>
 
 <ul>
     <li>請點擊執行 <code>setup.bat</code></li>
-    <li>如需部屬前端請執行 <code>setup_web.bat</code></li>
 </ul>
 
 > [!IMPORTANT]\
+> 如需部屬前端網頁，請另外再執行 `setup_web.bat`<br>
 > 由於目前的網頁設計與伺服器部屬緣故，建議前端部署僅使用在圖書館進出管理時使用，避免混用於多個用途。
 
 <h2>啟動程式</h2>
