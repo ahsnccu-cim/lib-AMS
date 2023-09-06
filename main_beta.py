@@ -51,6 +51,14 @@ def create_today_html(filename):
     <!DOCTYPE html>
     <html lang="zh-tw">
         <head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK7JBP6B2H"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TK7JBP6B2H');
+            </script>
             <meta charset="utf-8">
             <title> 進出館記錄 </title>
             </head>
@@ -211,8 +219,14 @@ def main():
             pack_inn()
         df1.to_excel(f"{user_historyfile}/{date}.xlsx", index=False) #輸出至 local, OneDrive 會 auto sync
     except:
-        pack_erro()
-        window.after(3100, main)   
+        if idnum == 'new_day_zero':
+            count_ = count_in(df1)
+            c_temp.pack_forget()
+            c.set(f"場館人數：{count_}  今日人次：{len(df1)}")
+            now_c.pack(pady=15)
+        else:
+            pack_erro()
+        window.after(3100, main)
     
     #window.after(3100, main) #等待2100ms後迴圈 
 

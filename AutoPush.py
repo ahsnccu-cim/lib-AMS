@@ -10,10 +10,19 @@ def add_last_update_time_todaypage(today, now_time, user_historyfile):
     #Read today's xlsx as DataFrame
     df1 = pd.read_excel(f"{user_historyfile}/{today}.xlsx", index_col=None)
     #不讀取今日 html ，直接儲存覆蓋
+    GA_script = '''
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TK7JBP6B2H');
+    </script>
+    '''
     output_html = f'''
         <!DOCTYPE html>
         <html lang="zh-tw">
             <head>
+                {GA_script}
                 <meta charset="utf-8">
                 <title> 進出館記錄 </title>
             </head>

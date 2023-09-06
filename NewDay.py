@@ -16,6 +16,14 @@ def create_today_html(filename):
     <!DOCTYPE html>
     <html lang="zh-tw">
         <head>
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK7JBP6B2H"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TK7JBP6B2H');
+            </script>
             <meta charset="utf-8">
             <title> 進出館記錄 </title>
             </head>
