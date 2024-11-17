@@ -10,7 +10,9 @@ AHSNCCU Access Management System (AMS)</p>
 > 適用於 Windows 10, 11。<br>
 > Linux (Ubuntu 22.04) 與 MacOS 測試中...
 
+<!--
 <p align="center"> (🚧文件施工中🚧) </p>
+-->
 
 <h2>部屬環境</h2>
 
