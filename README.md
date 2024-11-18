@@ -6,6 +6,8 @@
 AHSNCCU Access Management System (AMS)</p>
 <p></p>
 
+進出館紀錄查詢網站：[Website](https://ahsnccu-cim.github.io/lib-AMS/)
+
 > [!NOTE]\
 > 適用於 Windows 10, 11。<br>
 > Linux (Ubuntu 22.04) 與 MacOS 測試中...
