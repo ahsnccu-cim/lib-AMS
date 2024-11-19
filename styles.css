@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 75%;
+}
+
+.calendar__day {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.calendar__header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.calendar__day.current-day {
+  background-color: blue;
+  font-weight: bold;
+}
+
+.calendar__footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.calendar__day.current-day {
+  background-color: rgb(35, 40, 124);
+  font-weight: bold;
+  color: #f8dd49;
+}
+
+.team-info {
+  text-align: center;
+  color:#adadad;
+  margin-top: 120px;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .title {
+    font-size: clamp(18px, 4.5vw, 40px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

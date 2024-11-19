@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TK7JBP6B2H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-TK7JBP6B2H');
+  </script>
+
+  <title>國立政大附中圖書館學生進出館記錄</title>
+ 
+</head>
+<body>
+
+  <h1 class="title">
+    國立政大附中圖書館學生進出館記錄
+  </h1>
+
+  <div class="calendar__header">
+    <button onclick="previousMonth()">Previous</button>
+    <span id="currentMonth"></span>
+    <button onclick="nextMonth()">Next</button>
+  </div>
+  
+  <div class="container">
+    <div id="calendar" class="calendar"></div>
+  </div>
+  
+  <div class="calendar__footer">
+    <button onclick="goToToday()">Return to Today</button>
+  </div>
+
+  <div class="team-info">
+    developed by 政附第十六屆 · 王修佑 · 沈至萱 · 李馨亞<br>
+    powered by AHSNCCU-CIM
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

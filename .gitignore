@@ -1,0 +1,30 @@
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.env
+
+# Java
+*.class
+*.jar
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+
+# Build directories
+build/
+dist/
