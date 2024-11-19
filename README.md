@@ -86,6 +86,6 @@ git clone -b dev https://github.com/ahsnccu-scit/lib-AMS.git
 <p align="center"> • 國立政大附中第十六屆校友 • </p>
 <p align="center"> <a href="https://linktr.ee/whyhugo">王修佑</a> ｜ 沈至萱 ｜ 李馨亞 </p>
 <p></p>
-<p align="center"> Powered by 國立政大附中學生校友電資社群<br><a href='https://github.com/ahsnccu-scit/lib-AMS/tree/dev'> 開放原始碼 </a> </p>
+<p align="center"> Powered by 國立政大附中學生校友電資社群<br><a href='https://github.com/ahsnccu-scit/lib-AMS'> 開放原始碼 </a> </p>
 
 ---
